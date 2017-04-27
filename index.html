@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trello</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="trello.css">
+</head>
+<body>
+
+<div id="main">
+
+	<header>
+		<div class="left">
+			<div>
+				<a href="#" class="boardBtn"><i class="fa fa-th-large fa-lg" aria-hidden="true"></i>Boards</a>
+			</div>
+			<div>
+				<form>
+					<input type="search" placeholder="&#xF002; Search...">
+				</form>
+			</div>
+		</div>
+		<div class="middle">			
+			<div>
+				<img src="images/trello.jpg">
+			</div>			
+		</div>
+		<div class="right">
+			<div>
+				<div><img src="https://randomuser.me/api/portraits/women/49.jpg"></div>
+				<div class="sign">Hello,&ensp;<span>Ana</span> !</div>
+			</div>
+			<div>
+				<a href="#" class="bellBtn"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></a>
+				<a href="#" class="hamBtn"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</header>
+
+	<section class="pageContainer">
+		
+		<div class="topContainer">
+			<div class="info">
+				<div class="infoIcon fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x" aria-hidden="true"></i>
+					<i class="fa fa-star fa-stack-1x fa-inverse" aria-hidden="true"></i>
+				</div>
+				<div class="infoData">
+					<p class="teamTitle">Team Members (<span>6</span>)</p>
+					<p class="teamName">Netguru</p>
+				</div>
+			</div>
+			<div class="display">
+				<div class="lgBtn lgWidth selected"><a href="#" class="lgBtnTxt">All Members</a></div>
+				<div class="lgBtn lgWidth"><a href="#" class="lgBtnTxt">My team</a></div>
+			</div>
+			<div class="sort fa-lg">
+				<div><i class="fa fa-cogs" aria-hidden="true"></i></div>
+				<div class="smBtn smWidth selected"><a href="#" class="smBtnTxt"><i class="fa fa-th-large" aria-hidden="true"></i></a></div>
+				<div class="smBtn smWidth"><a href="#" class="smBtnTxt"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
+			</div>
+		</div>
+
+		<div id="cardsContainer">
+			<!-- Cards Will go Here-->
+			
+			<!-- Creator -->
+			<div class="cardCreator">
+				<div class="newUserIcon">
+					<div class="userIcon"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i></div>
+					<div class="plusIcon fa-stack">
+						<i class="fa fa-circle fa-stack-2x fa-inverse" aria-hidden="true"></i>
+						<i class="fa fa-plus fa-stack-1x fa-lg " aria-hidden="true"></i>
+					</div>
+					<div class="addUser fa-stack">
+						<a href="#" id="addUserBtn">
+							<i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+							<i class="fa fa-plus fa-stack-1x fa-inverse" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+				<div class="newUserTxt">
+					<p>Add Members to the team</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+</div>
+
+<div class="over creatorDisplay">
+	<div class="form">
+		<form>
+			<input type="text" name="formUserName" placeholder="Name" required="required">
+			<input type="text" name="formLastName" placeholder="Last Name" required="required">
+			<input type="text" name="formEmail" placeholder="Email | Twitter" required="required">
+			<input type="url" name="urlImage" placeholder="Image URL">
+			<input type="number" name="formNumber" placeholder="Number of tasks" required="required"> 
+			<div>
+				<input type="button" name="button" value="Cancel" id="cancelBtn">				
+				<input type="reset" name="reset" value="Reset">
+				<input type="button" name="send" value="Add" id="creatorBtn">
+			</div>			
+		</form>		
+	</div>	
+</div>
+
+<script type="text/javascript" src="trello.js"></script>
+
+</body>
+</html>
