@@ -1,102 +1,28 @@
 var container = document.getElementById("cardsContainer");
 var cardCreator = document.getElementsByClassName("cardCreator")[0];
 var theForm = document.getElementsByClassName("over")[0];
+var userArray = [];
 
-// array of user objects
-var userArray = [
+/*----- DATA -------*/
 
-	{
-		firstName: "Shawn", 
-		lastName: "Garner",
-		twitter: "@onlyDesign",
-		userImage: "https://randomuser.me/api/portraits/men/81.jpg",
-		tasks: "36",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""	
-	},
-
-	{
-		firstName: "Mathew", 
-		lastName: "Carron",
-		twitter: "@mathew",
-		userImage: "",
-		tasks: "0",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""		
-	},
-
-	{
-		firstName: "Leona", 
-		lastName: "Curtis",
-		twitter: "@norules",
-		userImage: "https://randomuser.me/api/portraits/women/30.jpg",
-		tasks: "34",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""		
-	},
-
-	{
-		firstName: "Alta", 
-		lastName: "Black",
-		twitter: "@altablack",
-		userImage: "",
-		tasks: "74",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""		
-	},
-
-	{
-		firstName: "Abbie", 
-		lastName: "Roy",
-		twitter: "@abbie",
-		userImage: "",
-		tasks: "0",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""		
-	},
-
-	{
-		firstName: "Juan", 
-		lastName: "Bennett",
-		twitter: "@bennet",
-		userImage: "",
-		tasks: "0",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""		
-	},
-
-	{
-		firstName: "Jared", 
-		lastName: "Lambert",
-		twitter: "@jared89",
-		userImage: "https://randomuser.me/api/portraits/men/71.jpg",
-		tasks: "21",
-		user:"",
-		icons:"",
-		data:"",
-		buttons:"",
-		card:""		
+// Load array of user objects from JSON file
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'users.json');
+ourRequest.onload = function(){
+	if(ourRequest.status >=200 && ourRequest.status < 400){
+		userArray = JSON.parse(ourRequest.responseText);
+		init();
+	}else{
+		alert("We connected to the server but it returned an error");
 	}
-]
+	
+};
 
+ourRequest.onerror = function(){
+	alert("Connection error");
+}
+
+ourRequest.send();
 
 var lineArray = [
 	"M245.75,37.5c0,0-19.5-19.25-40.5-9.84C184.302,37.046,173,65.5,141.703,64.62C112.193,63.79,91.25,51.5,60.5,52.75C32.023,53.907,1.649,80.651,1.649,80.651",
@@ -107,8 +33,7 @@ var lineArray = [
 
 var colorArray = ["72, 134, 255", "249, 96, 126", "18, 189, 183", "254, 182, 82"]
 
-
-init();
+/*----- Functions -------*/
 
 function init(){
 	for(var i=0; i<userArray.length; i++){
@@ -123,6 +48,7 @@ function newCard(index){
 	//create the base card container
 	dummyCard = document.createElement("div");
 	dummyCard.className = "dummyCard";
+	dummyCard.id = index;
 	container.insertBefore(dummyCard, cardCreator);
 	
 
@@ -174,7 +100,7 @@ function icons(index){
 
 	cardIcons = document.createElement("div");
 	cardIcons.className = "icons";
-	cardIcons.innerHTML = "<a href='#'><i class='fa fa-pencil fa-lg' aria-hidden='true'></i></a><a href='#'><i class='fa fa-bell-o fa-lg' aria-hidden='true'></i></a><a href='#'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a>";
+	cardIcons.innerHTML = "<a href='#'><i class='fa fa-pencil fa-lg' aria-hidden='true'></i></a><a href='#'><i class='fa fa-bell-o fa-lg' aria-hidden='true'></i></a><a href='#' onclick='removeCard("+index+")'><i class='fa fa-trash-o fa-lg' aria-hidden='true'></i></a>";
 
 	userArray[index].icons = cardIcons;
 }
@@ -246,6 +172,17 @@ document.getElementById("creatorBtn").addEventListener("click", function(){
 	
 });
 
+/*document.getElementsByClassName("delete").addEventListener("click", function(){
+	console.log("dsadsa");
+	var childDiv = container.getElementsByTagName('div')[this.id],
+	theForm.classList.add("creatorDisplay");
+});*/
 
-
+function removeCard(index){
+	console.log(index);
+	theId = index;
+	var childCard = document.getElementById(theId);
+	console.log("the id: "+theId);
+	childCard.classList.add("creatorDisplay");
+}
 
