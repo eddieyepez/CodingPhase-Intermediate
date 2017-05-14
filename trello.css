@@ -4,9 +4,7 @@ body{
 	font-weight: 600;
 	color: #989fa5;
 
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 50.9%, #4687ff 51%, #4687ff 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 50.9%,#4687ff 51%,#4687ff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: #ffffff; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(135deg, #ffffff 0%,#ffffff 50.9%,#4687ff 51%,#4687ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#4687ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
@@ -28,28 +26,43 @@ a:hover{
 	margin: 30px auto;
 	border-radius: 5px;
 	background-color: #f6f7fb;
-	box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+	-webkit-box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+	        box-shadow: 2px 2px 20px rgba(0,0,0,.2);
 }
 
 header{
 	width: 100%;
 	height: 70px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: nowrap;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background-color: white;
 	border-radius: 5px 5px 0px 0px;
 	padding: 0px;
 	margin: 0px;
-	box-shadow: 0px 5px 10px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0px 5px 10px rgba(0,0,0,.05);
+	        box-shadow: 0px 5px 10px rgba(0,0,0,.05);
 }
 
 .left{
 	width: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .left i{
@@ -73,9 +86,15 @@ form input[type="search"]{
 
 .middle{
 	width: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .middle img{
@@ -85,9 +104,15 @@ form input[type="search"]{
 
 
 .right div{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .right img{
@@ -102,8 +127,12 @@ form input[type="search"]{
 
 .right{
 	width: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;.
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;.
 	align-items: center;
 }
 
@@ -128,9 +157,16 @@ form input[type="search"]{
 	width: 95%;
 	margin: 0px auto;
 	padding: 30px 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .pageContainer a{
@@ -138,38 +174,65 @@ form input[type="search"]{
 }
 
 .topContainer{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: calc(100% - 20px);
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .info{
 	width: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .display{
 	width: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .sort
 {
 	width: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;.
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;.
 	align-items: center;
 }
 
 
 .infoData{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 .infoData p{
@@ -248,7 +311,8 @@ form input[type="search"]{
 .display .selected,
 .sort .selected{
 	background-color: white;
-	box-shadow: 0px 0px 6px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.1);
+	        box-shadow: 0px 0px 6px rgba(0,0,0,.1);
 	font-weight: 600;
 	border: none;
 	z-index: 9999;
@@ -266,9 +330,14 @@ form input[type="search"]{
 
 #cardsContainer{
 	margin-top: 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .dummyCard{
@@ -276,18 +345,35 @@ form input[type="search"]{
 	height: 420px;
 	margin: 10px;
 	background-color: white;
-	box-shadow: 2px 2px 20px rgba(0,0,0,.1);
+	-webkit-box-shadow: 2px 2px 20px rgba(0,0,0,.1);
+	        box-shadow: 2px 2px 20px rgba(0,0,0,.1);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	border-radius: 5px;
 }
 
 .user{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .user .imgHolder,
@@ -350,8 +436,11 @@ form input[type="search"]{
 }
 
 .icons{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	margin: 30px 15px;
 }
 
@@ -399,6 +488,8 @@ form input[type="search"]{
 }
 
 .cardButtons{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
 	text-transform: uppercase;
@@ -438,10 +529,19 @@ form input[type="search"]{
 	width: 300px;
 	height: 420px;
 	margin: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	border-radius: 5px;
 	border: 2px #dbdee3 dashed;
 }
@@ -506,10 +606,19 @@ form input[type="search"]{
 .form form{
 	height: 60%;
 	margin: 70px 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 input{
@@ -541,5 +650,3 @@ input[type=button], input[type=submit], input[type=reset] {
 .creatorDisplay{
 	display: none;
 }
-
-
