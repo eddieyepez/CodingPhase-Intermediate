@@ -3,7 +3,7 @@ CodingPhase-Intermediate-Challange
 HTML - CSS - JS
 
 See it live at:
-https://alfcito.github.io/CodingPhase-Intermediate/
+https://eddieyepez.github.io/CodingPhase-Intermediate/
 
 Currently the only funcionality is to add a new card.
 You can add a user name, a last name, an email or twitter, an profile image and a number of task to complete.
